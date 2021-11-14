@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29EF436B2735E00E00559221 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29EF436A2735E00E00559221 /* main.cpp */; };
+		29EF43762735EC5B00559221 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EF43752735EC5B00559221 /* OpenCL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		29EF43672735E00E00559221 /* programing_assig_3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = programing_assig_3; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EF436A2735E00E00559221 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		29EF43722735E17500559221 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		29EF43742735E9F200559221 /* devGolGenerateShr.cl */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.opencl; path = devGolGenerateShr.cl; sourceTree = "<group>"; };
+		29EF43752735EC5B00559221 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29EF43762735EC5B00559221 /* OpenCL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,7 @@
 			children = (
 				29EF43692735E00E00559221 /* programing_assig_3 */,
 				29EF43682735E00E00559221 /* Products */,
+				29EF43712735E17500559221 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +64,18 @@
 			isa = PBXGroup;
 			children = (
 				29EF436A2735E00E00559221 /* main.cpp */,
+				29EF43742735E9F200559221 /* devGolGenerateShr.cl */,
 			);
 			path = programing_assig_3;
+			sourceTree = "<group>";
+		};
+		29EF43712735E17500559221 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29EF43752735EC5B00559221 /* OpenCL.framework */,
+				29EF43722735E17500559221 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +257,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/glew/2.2.0_1/include,
+					/usr/local/Cellar/libomp/13.0.0/include,
+					/usr/local/Cellar/freeglut/3.2.1_1/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/libomp/13.0.0/lib,
+					/usr/local/Cellar/glew/2.2.0_1/lib,
+					/usr/local/Cellar/freeglut/3.2.1_1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -249,6 +275,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/glew/2.2.0_1/include,
+					/usr/local/Cellar/libomp/13.0.0/include,
+					/usr/local/Cellar/freeglut/3.2.1_1/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/libomp/13.0.0/lib,
+					/usr/local/Cellar/glew/2.2.0_1/lib,
+					/usr/local/Cellar/freeglut/3.2.1_1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
